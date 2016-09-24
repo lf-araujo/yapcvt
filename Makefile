@@ -1,7 +1,7 @@
 output.pdf :
 	pandoc -s \
 	-f markdown+raw_tex \
-	*.md \
+	cv.md \
 	-o /tmp/tempcv.pdf \
 	--template=template.tex \
 	--latex-engine=xelatex
