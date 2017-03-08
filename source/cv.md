@@ -34,7 +34,7 @@ header-includes:
 
 2014-now 
 
-:     The University XXX, Vic, XXX. \newline PhD student. Project title: A Project Title. Supervisors: XXX & YYY.
+:     The University XXX, YYYY, XXX. \newline PhD student. Project title: A Project Title. Supervisors: XXX & YYY.
 
 2010-2013
 
@@ -47,12 +47,18 @@ header-includes:
 
 2013-2014
 
-:    Liaison Psychiatrist. City. Country.
+:    Mechanical Engineer at some place
 
 
 ### Ad-hoc reviewer to
 
-- Ageing & Mental Health, Dementia & Geriatric Cognitive Disorders
+- Jornal A, Jornal B
+
+### Peer-reviewed publications
+
+1. XXXX. (2016). Paper title. Journal Title, 1–3. http://doi.org/10.1177/00380008514547803
+2. XXXX. (2016). Paper title. Journal Title, 1–3. http://doi.org/10.1177/00380008514547803
+
 
 ### Languages
 
@@ -63,8 +69,3 @@ header-includes:
     - Speaking: English (Well), French (Basic), German (Basic) 
     - Reading: English (Well), French (Well), German (Basic) 
     - Writing: English (Well), French (Basic), German (Basic)
-
-### Peer-reviewed publications
-
-1. XXXX. (2016). Paper title. Journal Title, 1–3. http://doi.org/10.1177/00380008514547803
-
