@@ -26,8 +26,8 @@ header-includes:
 - \usepackage[normalem]{ulem}
 - \usepackage{enumitem}
 - \usepackage{titlesec}
-- \setlist[description]{topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=0pt, font={\sffamily}, font={\rmfamily\scshape\color{BrickRed}\footnotesize},leftmargin=5em,style=nextline}
-- \titleformat*{\subsubsection}{\bfseries\scshape}
+- \setlist[description]{font={\sffamily}, font={\color{BrickRed}\footnotesize},leftmargin=5em,style=nextline}
+- \titleformat*{\subsubsection}{\scshape}
 - \titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
 ---
 
