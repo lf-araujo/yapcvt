@@ -10,6 +10,19 @@ $if(linestretch)$
 \usepackage{setspace}
 \setstretch{$linestretch$}
 $endif$
+
+% To enable page numbering with: "Lastname Résumé - Page 1 of 2 in small caps"
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+% To enable correct spacing
+\usepackage{xspace}
+\pagestyle{fancy}
+\fancyhf{}
+% Remove headline
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\textsc{\MakeLowercase{$lastname$} cv -- page \thepage \xspace of \pageref*{LastPage}}\\\vspace{.45cm}{\footnotesize \href{tel:$phone$}{$phone$} --
+\href{mailto:$email$}{$email$}}}
+
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -129,6 +142,21 @@ $if(graphics)$
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
+
+\makeatletter
+\DeclareRobustCommand{\amper}{%
+ \texorpdfstring{%
+ \begingroup
+ \ifx\f@shape\scname
+ \smaller[1.2]%
+ \fi
+ \char”E050
+ \endgroup
+ }{\&}\xspace
+}
+\makeatother
+
+
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
@@ -208,24 +236,30 @@ $if(institute)$
 $endif$
 \date{$date$}
 
+
 \begin{document}
 
+% COLUMN 1
+% A mistake that is often made is, there is a blank line between the \end{minipage} and \begin{minipage} left. Then the pages are no longer together.
 $if(name)$
-
-\begin{minipage}[t]{4in}
+\begin{minipage}[t]{.2\textwidth}
+$if(photo)$
+\begin{tikzpicture}
+\node[circle,inner sep=.85cm,fill overzoom image=$photo$] (A) {};
+\end{tikzpicture}
+$else$
+\hfill
+$endif$
+\end{minipage}%
+\begin{minipage}[t]{.4\textwidth}
  \flushright {\small 
  $street$ \\ $city$ \\ \textsc{$state$} $ZIP$ \\ \vspace{-0.05in} $country$}  
   
-\end{minipage}
-\hfill     
-%\begin{minipage}[t]{0.0in}
-% dummy (needed here)
-%\end{minipage}
-\hfill
-\begin{minipage}[t]{2in}
+\end{minipage}%
+\begin{minipage}[t]{.4\textwidth}
   \flushright \small  $phone$ \, \faPhone \\ 
-  {\small  \texttt{\href{mailto:$email$}{$email$}} \, \faEnvelope} \\
-  {\small  \texttt{\href{https://github.com/$github$}{$github$}} \, \faGithub}
+  {\small  \href{mailto:$email$}{$email$} \, \faEnvelope} \\
+  {\small  \href{https://github.com/$github$}{$github$} \, \faGithub}\\
 \end{minipage}
 
 
