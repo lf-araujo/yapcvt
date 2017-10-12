@@ -12,6 +12,7 @@ documentclass: article
 papersize: A4
 geometry: margin=1in
 colorlinks: yes
+urlcolor: BrickRed
 fontsize: 11pt
 mainfont: "Minion Pro"
 mainfontoptions:
@@ -33,7 +34,7 @@ header-includes:
 
 
 > PhD student at XXX, department of XXX, XXXX. Funded by XXXX to work in the field of brain and mind relation in psychiatric conditions.
-
+ 
 ### Education 
 
 2014-now 
