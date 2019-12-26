@@ -11,7 +11,7 @@ I've been using a custom CV template for some months, and finally I feel it is w
 
 Here is how it looks:
 
-![]( https://imgur.com/b7Jh8Mq )
+![]( https://i.imgur.com/b7Jh8Mq.png )
 
 The dependencies for it are:
 
